@@ -74,7 +74,7 @@ app.get('/web', function (req, res) {
 
 });
 
-app.get('/getall', async function (req, res) {
+app.get('/', async function (req, res) {
   let getalldata = await uploservice.getalldetails();
   if (!getalldata) {
     return res.status('500').json('something went wrong');
